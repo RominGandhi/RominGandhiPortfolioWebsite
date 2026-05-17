@@ -231,7 +231,7 @@ export function ExperienceSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <a
-              href="/resume/resume.pdf" target="_blank" rel="noreferrer"
+              href="/resume/resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.12)] bg-[rgba(255,255,255,0.05)] px-7 py-3 text-[14px] font-[500] text-[rgba(255,255,255,0.75)] backdrop-blur transition-all duration-200 hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.08)] hover:text-white"
