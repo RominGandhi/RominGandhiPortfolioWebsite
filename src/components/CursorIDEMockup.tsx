@@ -2,9 +2,7 @@ import { motion, useAnimation, useReducedMotion } from 'framer-motion'
 import {
   ArrowUp,
   Bell,
-  Check,
   ChevronDown,
-  Clipboard,
   Infinity,
   Paperclip,
   Search,
@@ -192,26 +190,6 @@ function PdfViewer() {
 }
 
 // ─── editor ──────────────────────────────────────────────────────────────────
-function CopyButton({ value }: { value: string }) {
-  const [copied, setCopied] = useState(false)
-  const copy = () => {
-    navigator.clipboard.writeText(value).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1800)
-    })
-  }
-  return (
-    <button
-      type="button"
-      onClick={copy}
-      title="Copy"
-      className="ml-2 inline-flex items-center opacity-0 group-hover/line:opacity-100 transition-opacity duration-150"
-      style={{ color: copied ? '#4ade80' : '#64748b' }}
-    >
-      {copied ? <Check size={10} /> : <Clipboard size={10} />}
-    </button>
-  )
-}
 
 function FileEditor({ fileId }: { fileId: FileId }) {
   const lines = FILE_CONTENT[fileId]

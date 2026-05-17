@@ -637,7 +637,7 @@ export default function App() {
     return () => { document.body.style.overflow = '' }
   }, [loading, nameDone, rightReady, agentDone])
   const [, setActive] = useState<FileId>('README.md')
-  const [, setFileContents] = useState<Record<FileId, string>>(() => defaultFileContents)
+  const [, ] = useState<Record<FileId, string>>(() => defaultFileContents)
 
   const [paletteOpen, setPaletteOpen] = useState(true)
   const [paletteQuery] = useState('')
@@ -925,7 +925,7 @@ export default function App() {
       <AnimatePresence>
         {visitorRole === 'recruiter' && !loading && (
           <motion.a
-            href="/resume/resume.pdf" target="_blank" rel="noreferrer"
+            href="/resume/resume.pdf"
             target="_blank"
             rel="noreferrer"
             initial={{ opacity: 0, y: -12 }}
@@ -1079,7 +1079,6 @@ export default function App() {
                           initials={initials}
                           layout="with-agent"
                           enabled={!reduceMotion && view === 'landing' && rightReady}
-                          onEnterWorkspace={() => setView('ide')}
                           onAgentDone={onAgentDone}
                         />
                       </motion.div>
