@@ -364,11 +364,10 @@ export type CursorIDEMockupProps = {
   name: string; title: string; tagline: string
   avatarSrc: string; initials: string; enabled: boolean
   layout?: 'ide-only' | 'with-agent'
-  onEnterWorkspace?: () => void
   onAgentDone?: () => void
 }
 
-export function CursorIDEMockup({ enabled, layout = 'with-agent', onEnterWorkspace, onAgentDone }: CursorIDEMockupProps) {
+export function CursorIDEMockup({ enabled, layout = 'with-agent', onAgentDone }: CursorIDEMockupProps) {
   const reduceMotion = useReducedMotion() ?? false
   const showAgent    = layout === 'with-agent'
   const agentEnabled = showAgent && enabled && !reduceMotion
