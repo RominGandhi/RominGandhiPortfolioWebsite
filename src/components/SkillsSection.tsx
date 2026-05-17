@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const BASE = '/logos'
+const BASE = `${import.meta.env.BASE_URL}logos`
 
 type Skill = { name: string; file: string }
 

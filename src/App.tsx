@@ -491,7 +491,7 @@ export default function App() {
   const email = 'gand6363@mylaurier.ca'
   const github = 'https://github.com/RominGandhi'
   const linkedin = 'https://www.linkedin.com/in/romin-gandhi-857105203/'
-  const avatarSrc = '/romin.png'
+  const avatarSrc = `${import.meta.env.BASE_URL}romin.png`
   const initials = 'RG'
 
   const projects: Project[] = useMemo(
@@ -925,7 +925,7 @@ export default function App() {
       <AnimatePresence>
         {visitorRole === 'recruiter' && !loading && (
           <motion.a
-            href="/resume/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume/resume.pdf`}
             target="_blank"
             rel="noreferrer"
             initial={{ opacity: 0, y: -12 }}
